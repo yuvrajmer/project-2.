@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header-div1 {
+            width: 50%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            border: 1px solid black;
+            border-radius: 50%;
+            height: 47px;
+            width: 49px;
+            padding: 7px;
+        }
+
+        .header-div2 {
+            width: 50%;
+            display: flex;
+        }
+
+        .header-h1 {
+            margin: 1.3vh 1vw;
+        }
+
+        .header-ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            font-size: 21px;
+            align-items: center;
+            margin-left: 16vw;
+        }
+
+        .header-a {
+            text-decoration: none;
+            color: black;
+            margin: 3vh 0;
+        }
+
+        .header-a:hover {
+            color: rgb(212, 142, 13);
+            font-size: large;
+        }
+
+        .header-ul-2 {
+            margin-left: 3vh;
+            display: flex;
+            gap: 1vw;
+            list-style: none;
+            align-items: center;
+        }
+
+        .icon {
+            height: 40px;
+            width: 42px;
+            border: 1px solid black;
+            border-radius: 50%;
+            text-align: center;
+            padding-top: 9px;
+            border: 2px solid rgb(230, 152, 9);
+        }
+
+        .icon:hover {
+            background-color: #e99638;
+            color: white;
+        }
+
+        .header-button {
+            height: 40px;
+            text-align: center;
+            width: 115px;
+            border: 2px solid rgb(230, 152, 9);
+            background: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .header-button:hover {
+            background-color: #e99638;
+            color: white;
+        }
+
+
+        /* SECTION-1 CSS */
+
+
+
+        .section1-div1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .section1-div1>h1 {
+            margin-top: 8vh;
+            font-size: 30px;
+        }
+
+        .section1-div2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .section1-div2-ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .buttons {
+            margin-top: 4vh;
+            height: 38px;
+            width: 110px;
+            border-radius: 20px;
+            border: 2px solid rgb(215, 175, 13);
+            background: none;
+        }
+
+        .buttons:hover {
+            color: #f8f2f2;
+            background-color: #f2a832;
+        }
+
+
+        /* SECTION-2 CSS */
+
+
+        .section2 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 7vh;
+        }
+
+        .box {
+            height: 38vh;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            background: #f8f2f2;
+            box-shadow: 7px 7px 14px #9f9b9b,
+                -7px -7px 14px #ffffff;
+        }
+
+        .box:hover {
+            border-radius: 12px;
+            background: linear-gradient(145deg, #ffffff, #dfdada);
+            box-shadow: 7px 7px 14px #9f9b9b,
+                -7px -7px 14px #ffffff;
+        }
+
+        .box>img {
+            height: 150px;
+            width: 200px;
+            object-fit: cover;
+            border-radius: 7px;
+        }
+
+        .box>h2 {
+            margin-top: 1vh;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+                      
+        .box>p {
+            margin-top: 1vh;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        
+      
+        .price {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3vh;
+            padding: 0vw 1vh; 
+            
+        }
+
+        .price>button {
+            background: none;
+            border-radius: 30px;
+            width: 90px;
+            height: 35px;
+            border: 3px solid rgb(234, 169, 29);
+            background-color: #f3b044;
+        }
+
+        .price>button:hover {
+            background: none;
+        }
+
+        /* FOOTER CSS */
+
+        .footer {
+            display: flex;
+            gap: 10vw;
+            justify-content: center;
+        }
+
+        .f-div1>h2 {
+            font-size: 28px;
+            margin-top: 10vh;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .search-bar {
+            border: none;
+            border-bottom: 1px solid black;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .f-icon {
+            display: flex;
+            gap: 9px;
+            font-size: 23px;
+            margin-top: 2vh;
+        }
+
+        .f-icon>i {
+            border: 1px solid black;
+            border-radius: 30px;
+            height: 36px;
+            width: 37px;
+            padding-top: 6px;
+        }
+
+        .f-ul1 {
+            margin-top: 100px;
+            list-style: none;
+            line-height: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .f-ul1>li>a {
+            color: rgb(35, 35, 35);
+            text-decoration: none;
+        }
+
+        .f-ul {
+            margin-top: 100px;
+            list-style: none;
+            line-height: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .f-ul>li>a {
+            color: rgb(35, 35, 35);
+            text-decoration: none;
+        }
+
+
+
+
+
+
+
+        @media (max-width : 1660px) {
+            .header-ul {
+                margin-left: 15vh;
+            }
+
+            .header-ul-2 {
+                display: flex;
+                gap: 1vw;
+                list-style: none;
+                align-items: center;
+                margin-right: 10px;
+            }
+        }
+
+        @media (max-width : 1500px) {
+            .header-ul {
+                display: none;
+            }
+
+            .header-ul-2 {
+                margin-left: auto;
+                display: flex;
+                gap: 1vw;
+                list-style: none;
+                align-items: center;
+                margin-right: 10px;
+            }
+        }
+
+        @media (max-width : 1300px) {
+            .section2 {
+                display: grid;
+                grid-template-columns: auto auto auto;
+            }
+
+            .box {
+                height: 38vh;
+                width: 280px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width : 1200px) {
+            .section1-div2-ul {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+        }
+
+        @media (max-width : 1000px) {
+            .section2 {
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+
+            .box {
+                height: 38vh;
+                width: 250px;
+                text-align: center;
+            }
+
+            .footer {
+                gap: 5vw;
+            }
+        }
+
+        @media (max-width : 750px) {
+            .footer {
+                gap: 5vw;
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+
+
+            .f-ul {
+                margin-top: 40px;
+            }
+
+        }
+
+        @media (max-width : 576px) {
+            .section2 {
+                display: grid;
+                grid-template-columns: auto;
+            }
+
+            .box {
+                height: 39vh;
+                width: 280px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width : 500px) {
+            .footer {
+                gap: 5vw;
+                display: grid;
+                grid-template-columns: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-div1">
+            <h1 class="header-h1"><i class="fa-solid fa-utensils logo">&nbsp;&nbsp;&nbsp;Bites</i></h1>
+        </div>
+        <div class="header-div2">
+            <ul class="header-ul">
+                <li><a href="" class="header-a">About Us</a> </li>
+                <li><a href="" class="header-a">Menu</a></li>
+                <li><a href="" class="header-a">Reviews</a></li>
+                <li><a href="" class="header-a">Blog</a></li>
+                <li><a href="" class="header-a">Contacts</a></li>
+
+            </ul>
+            <ul class="header-ul-2">
+                <li><i class="fa-solid fa-gift icon"></i></li>
+                <li><button class="header-button">Reserve Table</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="section1">
+        <div class="section1-div1">
+            <h1>Our Regular Menu Pack</h1>
+        </div>
+
+        <div class="section1-div2">
+            <ul class="section1-div2-ul">
+                <li><button class="buttons">Special Foods</button></li>
+                <li><button class="buttons">Mexican</button></li>
+                <li><button class="buttons">Italians</button></li>
+                <li><button class="buttons">Japanese</button></li>
+                <li><button class="buttons">Drinks</button></li>
+                <li><button class="buttons">Lunch</button></li>
+                <li><button class="buttons">Dinner</button></li>
+                <li><button class="buttons">More items</button></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="box"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd72yBQ_M6V5f0yGqp6sXWo-XyEcnt_wWHuw&s"
+                alt="">
+            <h2>Pasta</h2>
+            <p><i class="fa-solid fa-star fa-beat-fade" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat-fade" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat-fade" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat-fade" style="color: #FFD43B;"></i>
+            </p>
+            <p>Pasta can be made from various ingredients, but it is most commonly made from wheat. </p>
+            <div class="price">
+                <h2>$35.00</h2>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="box"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYOFvOMlVJiBKvxYuwjBGzEx55zkA-I1dWFQ&s"
+                alt="">
+            <h2>French fries</h2>
+            <p>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+
+            </p>
+            <p>French fries are made by cutting potatoes into strips, frying them in oil. </p>
+            <div class="price">
+                <h2>$35.00</h2>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="box"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjq2PCECX0N-IDY0JoBcNa6JGLbRAKZdEs_A&s"
+                alt="">
+            <h2>Sandwich</h2>
+            <p><i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+            </p>
+            <p>a food typically made with two or more slices of bread, with fillings placed between them.</p>
+            <div class="price">
+                <h2>$35.00</h2>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="box"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShHIcHhauV5neG-YaF10Salgtu1ybYND0_ew&s"
+                alt="">
+            <h2>Pizza</h2>
+            <p><i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+            </p>
+            <p>a popular flatbread dish, originally from Italy, typically topped with tomato sauce, cheese.</p>
+            <div class="price">
+                <h2>$35.00</h2>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="box"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd72yBQ_M6V5f0yGqp6sXWo-XyEcnt_wWHuw&s"
+                alt="">
+            <h2>Pasta</h2>
+            <p><i class="fa-solid fa-star fa-beat-fade" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat-fade" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat-fade" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat-fade" style="color: #FFD43B;"></i>
+            </p>
+            <p>Pasta can be made from various ingredients, but it is most commonly made from wheat. </p>
+            <div class="price">
+                <h2>$35.00</h2>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="box"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYOFvOMlVJiBKvxYuwjBGzEx55zkA-I1dWFQ&s"
+                alt="">
+            <h2>French fries</h2>
+            <p>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+
+            </p>
+            <p>French fries are made by cutting potatoes into strips, frying them in oil. </p>
+            <div class="price">
+                <h2>$35.00</h2>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="box"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjq2PCECX0N-IDY0JoBcNa6JGLbRAKZdEs_A&s"
+                alt="">
+            <h2>Sandwich</h2>
+            <p><i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+            </p>
+            <p>a food typically made with two or more slices of bread, with fillings placed between them.</p>
+            <div class="price">
+                <h2>$35.00</h2>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="box"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShHIcHhauV5neG-YaF10Salgtu1ybYND0_ew&s"
+                alt="">
+            <h2>Pizza</h2>
+            <p><i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star fa-beat" style="color: #FFD43B;"></i>
+            </p>
+            <p>a popular flatbread dish, originally from Italy, typically topped with tomato sauce, cheese.</p>
+            <div class="price">
+                <h2>$35.00</h2>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="f-div1">
+            <h2>Subscribe Our <br> Newsletter</h2>
+            <label for="">
+                <input class="search-bar" type="email" placeholder="email">
+            </label>
+            <p class="f-icon"><i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </p>
+        </div>
+        <ul class="f-ul1">
+            <li>
+                <h2>Service</h2>
+            </li>
+            <li style="margin-top: 10px;"><a href="">Online Order</a></li>
+            <li><a href="">Pre-Reservation</a></li>
+            <li><a href="">24/7 Services</a></li>
+            <li><a href="">Foodie Place</a></li>
+            <li><a href="">Super Chefs</a></li>
+        </ul>
+
+        <ul class="f-ul">
+            <li>
+                <h2>Quick Links</h2>
+            </li>
+            <li style="margin-top: 10px;"><a href="">Menu</a></li>
+            <li><a href="">Review</a></li>
+            <li><a href="">Blogs</a></li>
+            <li><a href="">Reserve Table</a></li>
+            <li><a href="">Order Foods</a></li>
+        </ul>
+
+        <ul class="f-ul">
+            <li>
+                <h2>About</h2>
+            </li>
+            <li style="margin-top: 10px;"><a href="">Our Story</a></li>
+            <li><a href="">Benefits</a></li>
+            <li><a href="">Career</a></li>
+            <li><a href="">Our Chefs</a></li>
+        </ul>
+
+        <ul class="f-ul">
+            <li>
+                <h2>Help</h2>
+            </li>
+            <li style="margin-top: 10px;"><a href="">Contact</a></li>
+            <li><a href="">Support</a></li>
+            <li><a href="">FAQ</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
